@@ -1,0 +1,151 @@
+{
+    "name": "Monkey",
+    "description": "This Monkey is going APE!"" 
+    "keywords" : [
+        "advertising",
+        "monetization",
+        "ads"
+        ],
+    "version": "0.0.1",
+    "category":"advertising",
+    "contributors": [
+        {
+            "name" : "greg lee coleman",
+            "email" : "apps+monkey@cloudflare.com"
+        }
+    ],
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/gleecology/cfapp-monkey.git"
+     },
+    "main" : "./public/javascripts/monkey.js",
+
+    "account": {
+        "callback_url": "http://173.245.57.134:40420/api/partners/cloudflare/apps/monkey",
+        "user_fields": ["email"]
+    },
+
+    "dependencies" : {
+    },
+    "licenses" : [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/MIT"
+        }
+    ],
+    "implements" : "AMD",
+    "scripts" : {
+    },
+    "config" : {
+        "assets" : {
+            "logos" : {
+            },
+            "detail_page" : [
+            ]
+        },
+        "payment": {},
+
+        "details": {
+           "Category": "Content Monetization",
+           "Language": "custom",
+           "Payout": "Impressions served",
+           "Restrictions": "We reserve the right to deny approval or remove access to the Monkey from any site with content that in our belief may be deemed negative in nature, illegal or offensive in any way, or as a result of misuse or abuse."
+
+       },
+
+       "interface": [
+          {
+              "type" : "hidden",
+              "id"   : "publisher_id",
+              "name" : "[a publisher id will be issued by CloudFlare]",
+              "value": "-1",
+              "domain_request" : true
+              
+          },
+ 
+          {
+            "id": "orient",
+            "name": "Ad Orientation",
+            "description" : "Select where to place the Monkey on your site",
+            "type": "select",
+            "options": [
+                { "value": "left",          "label": "Left Top"             },
+                { "value": "right",         "label": "Right Top",    "selected": "true" },
+                { "value": "left_bottom",   "label": "Left Bottom"      },
+                { "value": "right_bottom",  "label": "Right Bottom"     }
+            ]
+          },
+
+          {
+            "domain_request" : true,
+            "id": "text_only",
+            "name": "Ad Format",
+            "description" : "Choose to display only static ads, or static and video ads",
+            "type": "select",
+            "options": [
+                { 
+                    "label": "Static and Video",
+                    "value": 0
+                },
+                { 
+                    "label": "Static only",
+                    "value": 1,
+                    "selected": true
+                }
+             ] 
+          },
+          {
+            "id": "min_resolution",
+            "name": "Minimum Resolution",
+            "description" : "Limit display of the Monkey to the following window sizes",
+            "type": "select",
+            "options": [
+                { "value": 0,           "label": "All window sizes",  "selected": "true" },
+                { "value": "1024x0",    "label": "wider than 1024" },
+                { "value": "1600x0",    "label": "wider than 1600" }
+            ]
+          },
+
+          {
+            "id": "ss_view_max_ct",
+            "name": "Impressions per Session",
+            "description" : "Limit the number of impressions shown per session (20 min)",
+            "type": "select",
+            "options": [
+                { 
+                    "label": "No limit",
+                    "value": 0
+                },
+                { "value": 50,  "label": "50 impressions"  },
+                { "value": 25,  "label": "25 impressions", "selected": true  },
+                { "value": 10,  "label": "10 impressions"  },
+                { "value": 5,   "label": "5 impressions"   },
+                { "value": 1,   "label": "1 impressions"   }
+            ] 
+          },
+
+          {
+            "id": "user_pause_ttl",
+            "name": "Visitor Opt-out Period",
+            "description" : "Select the period of time to pause the Monkey after it is closed by a visitor",
+            "type": "select",
+            "options": [
+                { 
+                    "label": "Do not pause",
+                    "selected": true,
+                    "value": 0
+                },
+                { "value": 60,      "label": "1 minute" },
+                { "value": 360,     "label": "10 minutes" },
+                { "value": 3600,    "label": "1 hour" },
+                { "value": 14400,   "label": "4 hours" },
+                { "value": 43200,   "label": "12 hours" },
+                { "value": 86400,   "label": "24 hours" },
+                { "value": 259200,  "label": "72 hours" },
+                { "value": 315360000, "label": "Never show again" }
+            ] 
+          }
+        ]
+    }
+}
+
