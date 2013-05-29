@@ -52,6 +52,7 @@
     "config" : {
         "assets" : {
             "logos" : {
+                "132px": "./public/images/monkey_132.png"
             },
             "detail_page" : [
             ]
