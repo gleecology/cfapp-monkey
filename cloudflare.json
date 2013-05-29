@@ -6,7 +6,7 @@
         "monetization",
         "ads"
         ],
-    "version": "0.0.4",
+    "version": "0.0.5",
     "category":"advertising",
     "contributors": [
         {
@@ -53,6 +53,7 @@
         "assets" : {
             "logos" : {
                 "132px": "./public/images/monkey_132.png"
+                "200px": "./public/images/monkey_200.png"
             },
             "detail_page" : [
             ]
