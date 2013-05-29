@@ -52,7 +52,7 @@
     "config" : {
         "assets" : {
             "logos" : {
-                "132px": "./public/images/monkey_132.png"
+                "132px": "./public/images/monkey_132.png",
                 "200px": "./public/images/monkey_200.png"
             },
             "detail_page" : [
