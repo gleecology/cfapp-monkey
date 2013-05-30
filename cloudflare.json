@@ -1,4 +1,5 @@
 {
+    "version": "0.0.6",
     "name": "Monkey",
     "description": "This Monkey is going APE!",
     "keywords" : [
@@ -6,7 +7,6 @@
         "monetization",
         "ads"
         ],
-    "version": "0.0.5",
     "category":"advertising",
     "contributors": [
         {
@@ -21,7 +21,7 @@
     "main" : "./public/javascripts/monkey.js",
 
     "account": {
-        "callback_url": "http://127.0.0.1:40420/api/partners/cloudflare/apps/monkey",
+        "callback_url": "http://192.168.56.100:40420/api/partners/cloudflare/apps/monkey",
         "user_fields": ["email"]
     },
 
