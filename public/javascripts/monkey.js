@@ -5,7 +5,7 @@ CloudFlare.define( 'monkey', [      'monkey/config',   'cloudflare/jquery1.7' ],
 
     cfg         = cfg || {};
 
-    ['publisher_id', 'scroll', 'debug', 'user_pause_ttl', 'ss_view_max_ct', 'http_only', 'view_ttl' ].map(function(k){
+    ['appnexus_placement_id', 'ext_inv_code', 'scroll', 'debug', 'user_pause_ttl', 'ss_view_max_ct', 'http_only', 'view_ttl' ].map(function(k){
         cfg[k] = parseInt(cfg[k], 10) || 0;
     });
 

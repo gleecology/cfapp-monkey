@@ -1,5 +1,5 @@
 {
-    "version": "0.0.6",
+    "version": "0.0.7",
     "name": "Monkey",
     "description": "This Monkey is going APE!",
     "keywords" : [
@@ -21,7 +21,7 @@
     "main" : "./public/javascripts/monkey.js",
 
     "account": {
-        "callback_url": "http://192.168.56.100:40420/api/partners/cloudflare/apps/monkey",
+        "callback_url": "http://173.245.57.134:40420/api/partners/cloudflare/apps/monkey",
         "user_fields": ["email"]
     },
 
@@ -35,19 +35,6 @@
     ],
     "implements" : "AMD",
     "scripts" : {
-    },
-    "billing": {
-        "type": "zone",
-        "plans":[
-            {
-                "name" : "foo",
-                "price": "9.99"
-            },
-            {
-                "name" : "bar",
-                "price" : "100"
-            }
-        ]
     },
     "config" : {
         "assets" : {
@@ -69,13 +56,22 @@
        },
 
        "interface": [
+
           {
               "type" : "hidden",
-              "id"   : "publisher_id",
-              "name" : "[a publisher id will be issued by CloudFlare]",
+              "id"   : "appnexus_placement_id",
+              "name" : "[issued by CloudFlare]",
               "value": "-1",
               "domain_request" : true
-              
+          },
+ 
+
+          {
+              "type" : "hidden",
+              "id"   : "ext_inv_code",
+              "name" : "[issued by CloudFlare]",
+              "value": "-1",
+              "domain_request" : true
           },
  
           {
