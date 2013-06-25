@@ -1,5 +1,5 @@
 {
-    "version": "0.0.7",
+    "version": "0.0.8",
     "name": "Monkey",
     "description": "This Monkey is going APE!",
     "keywords" : [
@@ -21,7 +21,7 @@
     "main" : "./public/javascripts/monkey.js",
 
     "account": {
-        "callback_url": "http://173.245.57.134:40420/api/partners/cloudflare/apps/monkey",
+        "callback_url": "http://127.0.0.1:40420/api/partners/cloudflare/apps/monkey",
         "user_fields": ["email"]
     },
 
