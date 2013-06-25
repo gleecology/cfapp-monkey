@@ -1,5 +1,5 @@
 {
-    "version": "0.0.8",
+    "version": "0.0.9",
     "name": "Monkey",
     "description": "This Monkey is going APE!",
     "keywords" : [
@@ -7,7 +7,7 @@
         "monetization",
         "ads"
         ],
-    "category":"advertising",
+    "category":"monetization",
     "contributors": [
         {
             "name" : "greg lee coleman",
